@@ -1,31 +1,22 @@
 
 
-"""
-blue - 1
-green - 2
-yellow - 3
-white - 4
-orange - 5
-red - 6
-"""
-
 solved_cube = [
-    [   [1,1,1],
-        [1,1,1],
-        [1,1,1]   ],
-    [   [2,2,2],
-        [2,2,2],
-        [2,2,2]   ],
-    [   [3,3,3],
-        [3,3,3],
-        [3,3,3]   ],
-    [   [4,4,4],
-        [4,4,4],
-        [4,4,4]   ],
-    [   [5,5,5],
-        [5,5,5],
-        [5,5,5]   ],
-    [   [6,6,6],
-        [6,6,6],
-        [6,6,6]   ]
+    [   ["white","white","white"],
+        ["white","white","white"],
+        ["white","white","white"]   ],
+    [   ["yellow","yellow","yellow"],
+        ["yellow","yellow","yellow"],
+        ["yellow","yellow","yellow"]   ],
+    [   ["blue","blue","blue"],
+        ["blue","blue","blue"],
+        ["blue","blue","blue"]   ],
+    [   ["green","green","green"],
+        ["green","green","green"],
+        ["green","green","green"]   ],
+    [   ["orange","orange","orange"],
+        ["orange","orange","orange"],
+        ["orange","orange","orange"]   ],
+    [   ["red","red","red"],
+        ["red","red","red"],
+        ["red","red","red"]   ]
 ]
