@@ -27,6 +27,22 @@ from pprint import pprint
 
 def display_cube(cube):
 
+    for face in cube:
+        for side in face:
+            index = 0
+            for square in side:
+                if square.lower() == "g":
+                    side[index] = "\033[1;32;40mg\033[1;37;40m"
+                elif square.lower() == "r":
+                    side[index] = "\033[1;31;40mr\033[1;37;40m"
+                elif square.lower() == "b":
+                    side[index] = "\033[1;34;40mb\033[1;37;40m"
+                elif square.lower() == "o":
+                    side[index] = "\033[1;35;40mo\033[1;37;40m"
+                elif square.lower() == "y":
+                    side[index] = "\033[1;33;40my\033[1;37;40m"
+                index += 1
+
     middle = [cube[1], cube[2], cube[3], cube[4]]
 
     for side in cube[0]:
