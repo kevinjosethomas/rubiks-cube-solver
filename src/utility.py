@@ -1,25 +1,29 @@
-from pprint import pprint
+import os
+import copy
+import time
+import random
+from directions import *
 
 """
 [
     [
         ['g', 'g', 'g'],
-        ['g', 'G', 'g'],
+        ['g', 'g', 'g'],
         ['g', 'g', 'g']
     ],
     [
         ['r', 'r', 'r'],
-        ['r', 'R', 'r'],
+        ['r', 'r', 'r'],
         ['r', 'r', 'r']
     ],
     [
         ['b', 'b', 'b'],
-        ['b', 'B', 'b'],
+        ['b', 'b', 'b'],
         ['b', 'b', 'b']
     ],
     [
         ['o', 'o', 'o'],
-        ['o', 'O', 'o'],
+        ['o', 'o', 'o'],
         ['o', 'o', 'o']
     ]
 ]
@@ -61,3 +65,14 @@ def display_cube(cube):
     for side in cube[5]:
         print(" " * 7, end="")
         print(" ".join(side))
+
+def shuffle(cube):
+
+    shuffled_cube = copy.deepcopy(cube)
+
+    for i in range(1, 1000000):
+
+        chosen_func  = random.choice([u, u_, f, f_, d, d_])
+        shuffled_cube = chosen_func(shuffled_cube)
+
+    return shuffled_cube

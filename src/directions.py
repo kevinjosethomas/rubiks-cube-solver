@@ -15,21 +15,62 @@ import copy
 ]
 """
 
+"""
+white - 0
+green - 1
+red - 2
+blue - 3
+orange - 4
+yellow = 5
+"""
+
 def u(cube):
     temp_cube = copy.deepcopy(cube)
+
+    # Front Face
     temp_cube[1][0] = cube[2][0]
     temp_cube[2][0] = cube[3][0]
     temp_cube[3][0] = cube[4][0]
     temp_cube[4][0] = cube[1][0]
 
+    # Top Face
+    temp_cube[0][2][0] = cube[0][2][2]
+    temp_cube[0][2][1] = cube[0][1][2]
+    temp_cube[0][2][2] = cube[0][0][2]
+
+    temp_cube[0][1][2] = cube[0][0][1]
+    temp_cube[0][0][2] = cube[0][0][0]
+
+    temp_cube[0][0][1] = cube[0][1][0]
+    temp_cube[0][2][0] = cube[0][2][2]
+
+    temp_cube[0][0][0] = cube[0][2][0]
+    temp_cube[0][1][0] = cube[0][2][1]
+
     return temp_cube
 
 def u_(cube):
     temp_cube = copy.deepcopy(cube)
+
+    # Front Face
     temp_cube[2][0] = cube[1][0]
     temp_cube[3][0] = cube[2][0]
     temp_cube[4][0] = cube[3][0]
     temp_cube[1][0] = cube[4][0]
+
+    # Top Face
+    temp_cube[0][2][2] = cube[0][2][0]
+    temp_cube[0][1][2] = cube[0][2][1]
+    temp_cube[0][0][2] = cube[0][2][2]
+
+    temp_cube[0][0][1] = cube[0][1][2]
+    temp_cube[0][0][0] = cube[0][0][2]
+
+    temp_cube[0][1][0] = cube[0][0][1]
+    temp_cube[0][2][2] = cube[0][2][0]
+
+    temp_cube[0][2][0] = cube[0][0][0]
+    temp_cube[0][2][1] = cube[0][1][0]
 
     return temp_cube
 
@@ -40,6 +81,20 @@ def d(cube):
     temp_cube[3][2] = cube[4][2]
     temp_cube[4][2] = cube[1][2]
 
+    # Top Face
+    temp_cube[5][2][2] = cube[5][2][0]
+    temp_cube[5][1][2] = cube[5][2][1]
+    temp_cube[5][0][2] = cube[5][2][2]
+
+    temp_cube[5][0][1] = cube[5][1][2]
+    temp_cube[5][0][0] = cube[5][0][2]
+
+    temp_cube[5][1][0] = cube[5][0][1]
+    temp_cube[5][2][2] = cube[5][2][0]
+
+    temp_cube[5][2][0] = cube[5][0][0]
+    temp_cube[5][2][1] = cube[5][1][0]
+
     return temp_cube
 
 def d_(cube):
@@ -48,6 +103,20 @@ def d_(cube):
     temp_cube[3][2] = cube[2][2]
     temp_cube[4][2] = cube[3][2]
     temp_cube[1][2] = cube[4][2]
+
+    # Top Face
+    temp_cube[5][2][0] = cube[5][2][2]
+    temp_cube[5][2][1] = cube[5][1][2]
+    temp_cube[5][2][2] = cube[5][0][2]
+
+    temp_cube[5][1][2] = cube[5][0][1]
+    temp_cube[5][0][2] = cube[5][0][0]
+
+    temp_cube[5][0][1] = cube[5][1][0]
+    temp_cube[5][2][0] = cube[5][2][2]
+
+    temp_cube[5][0][0] = cube[5][2][0]
+    temp_cube[5][1][0] = cube[5][2][1]
 
     return temp_cube
 

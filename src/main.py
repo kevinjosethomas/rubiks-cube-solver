@@ -54,14 +54,5 @@ g g g  r r r  b b b  o o o
 
 # Prints solved cube
 display_cube(solved_cube)
-
 print("\n\n")
-cube = directions.f(cube)
-display_cube(cube)
-print("\n\n")
-time.sleep(1)
-
-cube = directions.f_(cube)
-display_cube(cube)
-print("\n")
-time.sleep(1)
+display_cube(shuffle(cube))
