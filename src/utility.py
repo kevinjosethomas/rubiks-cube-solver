@@ -45,8 +45,7 @@ def shuffle(cube: list) -> list:
 
     shuffled_cube = copy.deepcopy(cube)
 
-    for i in range(1, 100):
-
+    for _ in range(1, 100):
         chosen_func  = random.choice([u, l, f, r, b, d, u_, l_, f_, r_, b_, d_])
         shuffled_cube = chosen_func(shuffled_cube)
 
