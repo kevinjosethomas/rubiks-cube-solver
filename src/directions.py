@@ -1,29 +1,5 @@
 import copy
 
-"""
-[
-    [
-        ['g', 'g', 'g'],
-        ['g', 'G', 'g'],
-        ['g', 'g', 'g']
-    ],
-    [
-        ['r', 'r', 'r'],
-        ['r', 'R', 'r'],
-        ['r', 'r', 'r']
-    ]
-]
-"""
-
-"""
-white - 0
-green - 1
-red - 2
-blue - 3
-orange - 4
-yellow = 5
-"""
-
 # Clockwise Rotations
 
 def u(cube):
@@ -461,12 +437,3 @@ def s_(cube):
     temp_cube = b_(temp_cube)
 
     return temp_cube
-
-"""
-white - 0
-green - 1
-red - 2
-blue - 3
-orange - 4
-yellow - 5
-"""

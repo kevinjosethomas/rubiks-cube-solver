@@ -38,19 +38,5 @@ solved_cube = [
 ]
 cube = copy.deepcopy(solved_cube)
 
-"""
-
-       w w w
-       w W w
-       w w w
-g g g  r r r  b b b  o o o
-g G g  r R r  b B b  o O o
-g g g  r r r  b b b  o o o
-       y y y
-       y Y y
-       y y y
-
-"""
-
 # Prints solved cube
 show(solved_cube)

@@ -4,31 +4,6 @@ import time
 import random
 from directions import *
 
-"""
-[
-    [
-        ['g', 'g', 'g'],
-        ['g', 'g', 'g'],
-        ['g', 'g', 'g']
-    ],
-    [
-        ['r', 'r', 'r'],
-        ['r', 'r', 'r'],
-        ['r', 'r', 'r']
-    ],
-    [
-        ['b', 'b', 'b'],
-        ['b', 'b', 'b'],
-        ['b', 'b', 'b']
-    ],
-    [
-        ['o', 'o', 'o'],
-        ['o', 'o', 'o'],
-        ['o', 'o', 'o']
-    ]
-]
-"""
-
 def show(cube: list):
 
     for face in cube:
@@ -76,12 +51,3 @@ def shuffle(cube: list) -> list:
         shuffled_cube = chosen_func(shuffled_cube)
 
     return shuffled_cube
-
-"""
-white - 0
-green - 1
-red - 2
-blue - 3
-orange - 4
-yellow - 5
-"""
