@@ -41,12 +41,16 @@ def show(cube: list):
         print(" " * 7, end="")
         print(" ".join(side))
 
-def shuffle(cube: list) -> list:
+def shuffle(cube: list, progress: int = 0.1) -> list:
 
     shuffled_cube = copy.deepcopy(cube)
 
     for _ in range(1, 100):
         chosen_func  = random.choice([u, l, f, r, b, d, u_, l_, f_, r_, b_, d_])
         shuffled_cube = chosen_func(shuffled_cube)
+        if progress:
+            show(shuffled_cube)
+            time.sleep(progress)
+            os.system("cls")
 
     return shuffled_cube
