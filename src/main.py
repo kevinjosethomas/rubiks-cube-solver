@@ -53,4 +53,4 @@ g g g  r r r  b b b  o o o
 """
 
 # Prints solved cube
-display_cube(solved_cube)
+show(solved_cube)

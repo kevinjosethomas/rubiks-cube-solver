@@ -29,7 +29,7 @@ from directions import *
 ]
 """
 
-def display_cube(cube):
+def show(cube):
 
     for face in cube:
         for side in face:
