@@ -2,7 +2,7 @@ import copy
 
 # Clockwise Rotations
 
-def u(cube):
+def u(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -27,7 +27,7 @@ def u(cube):
 
     return temp_cube
 
-def l(cube):
+def l(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -62,7 +62,7 @@ def l(cube):
 
     return temp_cube
 
-def f(cube):
+def f(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -98,7 +98,7 @@ def f(cube):
 
     return temp_cube
 
-def r(cube):
+def r(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -133,7 +133,7 @@ def r(cube):
 
     return temp_cube
 
-def b(cube):
+def b(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -168,7 +168,7 @@ def b(cube):
 
     return temp_cube
 
-def d(cube):
+def d(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -196,7 +196,7 @@ def d(cube):
 
 # Counterclockwise Rotations
 
-def u_(cube):
+def u_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -221,7 +221,7 @@ def u_(cube):
 
     return temp_cube
 
-def l_(cube):
+def l_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -256,7 +256,7 @@ def l_(cube):
 
     return temp_cube
 
-def f_(cube):
+def f_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -291,7 +291,7 @@ def f_(cube):
 
     return temp_cube
 
-def r_(cube):
+def r_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -326,7 +326,7 @@ def r_(cube):
 
     return temp_cube
 
-def b_(cube):
+def b_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -362,7 +362,7 @@ def b_(cube):
 
     return temp_cube
 
-def d_(cube):
+def d_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     # Changing same color
@@ -390,7 +390,7 @@ def d_(cube):
 
 # Slice Turns
 
-def m(cube):
+def m(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     temp_cube = r(temp_cube)
@@ -398,7 +398,7 @@ def m(cube):
 
     return temp_cube
 
-def m_(cube):
+def m_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     temp_cube = r_(temp_cube)
@@ -406,7 +406,7 @@ def m_(cube):
 
     return temp_cube
 
-def e(cube):
+def e(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     temp_cube = u(temp_cube)
@@ -414,7 +414,7 @@ def e(cube):
 
     return temp_cube
 
-def e_(cube):
+def e_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     temp_cube = u_(temp_cube)
@@ -422,7 +422,7 @@ def e_(cube):
 
     return temp_cube
 
-def s(cube):
+def s(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     temp_cube = f_(temp_cube)
@@ -430,7 +430,7 @@ def s(cube):
 
     return temp_cube
 
-def s_(cube):
+def s_(cube: list):
     temp_cube = copy.deepcopy(cube)
 
     temp_cube = f(temp_cube)
