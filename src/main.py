@@ -54,5 +54,3 @@ g g g  r r r  b b b  o o o
 
 # Prints solved cube
 display_cube(solved_cube)
-print("\n\n")
-display_cube(shuffle(cube))
