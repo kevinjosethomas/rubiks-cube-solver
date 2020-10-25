@@ -29,7 +29,7 @@ from directions import *
 ]
 """
 
-def show(cube):
+def show(cube: list):
 
     for face in cube:
         for side in face:
@@ -66,13 +66,22 @@ def show(cube):
         print(" " * 7, end="")
         print(" ".join(side))
 
-def shuffle(cube):
+def shuffle(cube: list) -> list:
 
     shuffled_cube = copy.deepcopy(cube)
 
-    for i in range(1, 1000000):
+    for i in range(1, 100):
 
-        chosen_func  = random.choice([u, u_, f, f_, d, d_])
+        chosen_func  = random.choice([u, l, f, r, b, d, u_, l_, f_, r_, b_, d_])
         shuffled_cube = chosen_func(shuffled_cube)
 
     return shuffled_cube
+
+"""
+white - 0
+green - 1
+red - 2
+blue - 3
+orange - 4
+yellow - 5
+"""
